@@ -1,42 +1,166 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.BackgroundGraphic {
+    position: fixed;
+    height: 2000px;
+    width: 2000px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#TealGraphic {
+    left: 500px;
+    top: -200px
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#BlueGraphic {
+    top: 200px;
+    left: 1200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.App {
+    height: 900px;
+    width: 900px;
+    border-radius: 16px;
+    border: 1px solid #0C1616;
+    background: linear-gradient(150deg, rgba(23, 85, 83, 0.70) 1.7%, rgba(67, 217, 173, 0.09) 81.82%);
+    box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.30) inset;
+    backdrop-filter: blur(32px);
+    display: flex;
+    flex-direction: row;
+    padding: 50px 50px;
 }
 
-.card {
-  padding: 2em;
+.GameBoardContainer {
+    flex-grow: 1;
+    flex-basis: 0;
+    border-radius: 16px;
+    background: rgba(1, 22, 39, 0.84);
+    box-shadow: 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset;
+    margin: 15px;
 }
 
-.read-the-docs {
-  color: #888;
+.GameInfoContainer {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 15px;
+}
+
+#GameBoard {
+    height: 100%;
+    width: 100%;
+}
+
+.head {
+    transform: scale(1);
+}
+
+.snake {
+    background-color: #43D9AD;
+    border-radius: 9px;
+    transform: scale(0.90);
+}
+
+.apple {
+    background: url("./assets/apple.svg");
+    transform: scale(2);
+    background-repeat: no-repeat;
+}
+
+#GameOverContainer {
+    position: absolute;
+    height: 870px;
+    width: 420px;
+}
+
+#StartOverText {
+    color: #43D9AD;
+    font-size: 44px;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 150px;
+    width: 420px;
+    height: 100px;
+    border-radius: 12px;
+    background: rgba(1, 22, 39, 0.84);
+    box-shadow: 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset;
+}
+
+#StartOverButton {
+    position: absolute;
+    color: #607B96;
+    text-align: center;
+    font-family: Fira Code;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 420px;
+    bottom: 75px;
+    cursor: pointer;
+}
+
+.InstructionsContainer {
+    border-radius: 12px;
+    background: rgba(1, 20, 35, 0.19);
+    padding: 30px 30px;
+}
+
+.InstructionText {
+    font-size: 24px;
+    font-weight: 450;
+}
+
+.KeysContainer {
+    margin-top: 50px;
+}
+
+.KeyRow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.Key {
+    margin: 20px 30px;
+    transform: scale(2.25);
+}
+
+.AppleIndicatorContainer {
+    margin-top: 50px;
+    padding: 20px 30px;
+}
+
+.ApplesContainer {}
+
+.appleindicator {
+    width: fit-content;
+}
+
+.StartGameButton {
+    position: absolute;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background: #FEA55F;
+    cursor: pointer;
+    color: #01080E;
+    text-align: right;
+    font-family: Fira Code;
+    font-size: 24px;
+    font-weight: 450;
+}
+
+.StartGameButtonContainer {
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 150px;
+    width: 420px;
+    height: fit-content;
 }
